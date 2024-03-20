@@ -14,6 +14,7 @@ import Contact from "./Contact.jsx";
 import Users from "./components/Users.jsx";
 import UserDetails from "./components/UserDetails.jsx";
 import Posts from "./Posts.jsx";
+import Error from "./Error.jsx";
 // import PostDetails from "./PostDetails.jsx";
 import Post from "./Post.jsx";
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<Home></Home>,
+    errorElement:<Error></Error>,
     children:[
       {
         path:'/about',

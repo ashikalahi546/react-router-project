@@ -1,8 +1,12 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
 const PostDetails = ({post}) => {
+    const navigate = useNavigate()
+    const handleShowDetails = () =>{
+navigate(`/post/${id}`)
+    }
     
     const {id,title,body} = post;
     const postStyle = {
@@ -17,6 +21,7 @@ const PostDetails = ({post}) => {
             <h5>{title}</h5>
             <p>{body}</p>
             <Link to={`/post/${id}`}>Details</Link>
+            <button onClick={handleShowDetails}>Show Details</button>
         </div>
     );
 };
